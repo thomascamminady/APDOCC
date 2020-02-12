@@ -26,3 +26,9 @@ Loading them as `combinations` and `colors` respectively, the usage is as follow
 
 There are a total of 348 combinations and 157 different colors. Combinations contain one, two, three, four, or five colors. 
 
+
+## All combinations
+These are all combinations, sorted by number of colors contained.
+
+### One color (arguably not a combination)
+
