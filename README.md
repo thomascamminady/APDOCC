@@ -32,3 +32,4 @@ These are all combinations, sorted by number of colors contained.
 
 ### One color (arguably not a combination)
 
+![](combinations/1/087_1.png?raw=true)
