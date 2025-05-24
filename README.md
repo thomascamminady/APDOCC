@@ -25,7 +25,7 @@ Combinations[12].show()
 ## All color combinations
 
 <p align="center">
-  <img src="docs/combos.svg" width="800" alt="all APDOCC combinations">
+  <img src="docs/combos.svg" width="640" alt="all APDOCC combinations">
 </p>
 
 ## Info
