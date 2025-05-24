@@ -9,23 +9,16 @@ readme = "README.md"
 repository = "https://github.com/thomascamminady/apdocc"
 homepage = "https://github.com/thomascamminady/apdocc"
 documentation = "https://thomascamminady.github.io/apdocc"
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.8"
+dependencies = [
+    "rich>=14.0.0",
+]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[dependency-groups]
-dev = [
-    "ipykernel>=6.29.5",
-    "mypy>=1.14.1",
-    "pylint>=3.3.3",
-    "pytest>=8.3.4",
-    "pytest-cov>=6.0.0",
-    "regex>=2024.11.6",
-    "rich>=13.9.4",
-]
+
 
 [tool.ruff]
 lint.ignore = [
@@ -36,7 +29,6 @@ lint.ignore = [
     "D401",
     "E501",
 ]
-line-length = 80
 lint.select = [
     "B",
     "B9",
@@ -49,6 +41,7 @@ lint.select = [
     "W",
     "I001",
 ]
+line-length = 80
 exclude = [
   # VCS metadata
   ".git",
