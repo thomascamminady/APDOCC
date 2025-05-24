@@ -1,7 +1,7 @@
 [project]
 name = "apdocc"
-version = "0.1.0"
-description = ""
+version = "0.2.0"
+description = "A Python Dictionary of Color Combinations"
 authors = [
     { name = "Thomas Camminady", email = "0milieux_member@icloud.com" }
 ]
@@ -11,7 +11,7 @@ homepage = "https://github.com/thomascamminady/apdocc"
 documentation = "https://thomascamminady.github.io/apdocc"
 requires-python = ">=3.8"
 dependencies = [
-    "rich>=14.0.0",
+    "rich>=10.0.0",
 ]
 
 [build-system]

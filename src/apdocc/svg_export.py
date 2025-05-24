@@ -84,13 +84,11 @@ def _row_svg(
 
 # ─────────────────────────  main exporter  ────────────────────────────
 def export_svg(
-    colors_file: str = "src/apdocc/colors.json",
-    combos_file: str = "src/apdocc/combinations.json",
     out_file: str = "docs/combos.svg",
 ) -> Path:
     """Generate *docs/combos.svg* and return its Path."""
-    palette = load_palette(colors_file)
-    combos = load_combinations(combos_file, palette)
+    palette = load_palette()
+    combos = load_combinations(palette)
 
     rows: list[ColorCombination] = sorted(
         combos.values(), key=lambda c: (len(c), c.cid)
