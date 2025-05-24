@@ -1,0 +1,110 @@
+[project]
+name = "apdocc"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "Thomas Camminady", email = "0milieux_member@icloud.com" }
+]
+readme = "README.md"
+repository = "https://github.com/thomascamminady/apdocc"
+homepage = "https://github.com/thomascamminady/apdocc"
+documentation = "https://thomascamminady.github.io/apdocc"
+requires-python = ">=3.13"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+    "mypy>=1.14.1",
+    "pylint>=3.3.3",
+    "pytest>=8.3.4",
+    "pytest-cov>=6.0.0",
+    "regex>=2024.11.6",
+    "rich>=13.9.4",
+]
+
+[tool.ruff]
+lint.ignore = [
+    "D100",
+    "D101",
+    "D103",
+    "D104",
+    "D401",
+    "E501",
+]
+line-length = 80
+lint.select = [
+    "B",
+    "B9",
+    "C",
+    "D",
+    "E",
+    "F",
+    "N",
+    "S",
+    "W",
+    "I001",
+]
+exclude = [
+  # VCS metadata
+  ".git",
+  ".github",
+
+  # Virtual-envs & caches
+  ".venv",
+  "__pycache__",
+  ".ipynb_checkpoints",
+  ".mypy_cache",
+  ".pytest_cache",
+  ".ruff_cache",
+
+  # Docs, data & notebooks
+  "docs/**",
+
+  # Non-Python files
+  "*.md",
+  "*.toml",
+  "*.yaml",
+  "*.yml",
+  "*.html",
+  "*.json",
+
+  # Python bytecode
+  "*.pyc",
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+"**/__init__.py" = [
+    "D200",
+    "D400",
+]
+
+[tool.pylint.MASTER]
+disable=[
+    "C0114", # missing-module-docstring
+    "C0115", # missing-class-docstring
+]
+
+[tool.pyright]
+exclude = [
+    ".venv/*",
+    ".mypy_cache/*",
+    ".pytest_cache/*",
+    ".ruff_cache/*",
+    ".ipynb_checkpoints/*",
+    ".git/*",
+    ".github/*",
+    "**/__pycache__/*",
+    "**/*.pyc",
+]
